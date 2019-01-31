@@ -5,12 +5,13 @@ import { AppComponent } from './app.component';
  
 import { CursosComponent } from './cursos/cursos.component';
 import { DetalheComponent } from './cursos/detalhe/detalhe.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
  
 
 @NgModule({
   declarations: [
     AppComponent,    
-    CursosComponent,DetalheComponent 
+    CursosComponent,DetalheComponent, DataBindingComponent 
   ],
   imports: [
     BrowserModule
