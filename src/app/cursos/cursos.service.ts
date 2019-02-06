@@ -4,8 +4,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CursosService {
+  Cores:string[] = ['Red','green','blue'];
+    inputType : string ; 
+    placeholderText:string;
+    inputClass : string;
 
-  constructor() { }
+  constructor() { 
+    this.placeholderText = "Type your password"
+    this.inputType = 'password'   
+      
+
+
+  }
   getCursos(){     
      return ['Java','delphi','aspnet','angular']
  

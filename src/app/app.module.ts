@@ -9,12 +9,12 @@ import { DetalheComponent } from './cursos/detalhe/detalhe.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { ProangulaComponent } from './proangula/proangula.component';
 import { FormsModule } from '@angular/forms';
-import { CursosModule } from './cursos/cursos.module';
+ 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CursosComponent,DetalheComponent, DataBindingComponent,CursosModule, ProangulaComponent
+    CursosComponent,DetalheComponent, DataBindingComponent, ProangulaComponent
   ],
   imports: [
     BrowserModule,
