@@ -4,25 +4,20 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CursosService {
-  Cores:string[] = ['Red','green','blue'];
-    inputType : string ; 
-    placeholderText:string;
-    inputClass : string;
-
-  constructor() { 
-    this.placeholderText = "Type your password"
-    this.inputType = 'password'   
-      
+  constructor() {
 
 
   }
-  getCursos(){     
+  getCursos(){
      return ['Java','delphi','aspnet','angular']
- 
+
   }
   getTitulo(){
 
     return "TABAJARA CORPORATE LTDA "
+
+  }
+  getNome(){
 
   }
 }

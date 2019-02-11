@@ -1,14 +1,15 @@
 import { Title } from '@angular/platform-browser';
-import { Component } from '@angular/core';
-import { stringify } from 'querystring';
 
-@Component({
+import { stringify } from 'querystring';
+import { Component, AfterViewInit } from '@angular/core';
+import * as $ from 'jquery';
+ @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   inputs:['title']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit{
   info: {};
   Primeiro: string;
   segundo: string;
@@ -26,7 +27,7 @@ export class AppComponent {
   }
   clickHandler(){
     console.log("clique Me")
-  }  
+  }
   constructor() {
     this.N = false;
     this.info = { title: "App work ", Descricao: "Desenvolvimento de Sistemas Angular" };
@@ -35,8 +36,12 @@ export class AppComponent {
     this.isDisable   = false;
     this.placeholder = "Digite o seu Password";
     this.inputType   = "Senha";
-    this.title = "Titulo 2 Desenvolvimento de sistemas "
+
   }
+  ngAfterViewInit() {
+    $('h1').tooltip();
+
+    }
   getFullName() {
     return `${this.Primeiro} ${this.segundo}`;
   }
@@ -46,5 +51,5 @@ export class AppComponent {
   sendUser(){
     console.log(this.user);
   }
-  
+
 }

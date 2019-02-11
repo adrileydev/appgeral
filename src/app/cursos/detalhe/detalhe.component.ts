@@ -9,11 +9,11 @@ import { CursosService } from '../cursos.service';
 export class DetalheComponent implements OnInit {
 
   cores:string[];
-     
-  constructor(private cursos_services : CursosService) {       
-    this.cores = this.cursos_services.Cores;  
+
+  constructor(private cursos_services : CursosService) {
+
   }
- 
+
 
   ngOnInit() {
   }
