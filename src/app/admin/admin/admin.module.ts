@@ -6,6 +6,7 @@ import { AdminService } from '../admin.service';
   declarations: [],
   imports: [
     CommonModule
-  ]
+  ],
+  providers:[AdminService]
 })
 export class AdminModule { }
