@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../admin/admin.service';
+
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  cursos: string[] = [];
 
-  constructor() { }
+
+  constructor( private CursosServices_: AdminService) {
+ ///  this.CursosServices  = new  AdminService();
+         }
 
   ngOnInit() {
+   /// this.cursos = this.CursosServices.getCursos();
+   this.cursos = this.CursosServices_.getCursos();
+
+
   }
 
 }

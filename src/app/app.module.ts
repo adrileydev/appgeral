@@ -1,18 +1,22 @@
+import { AdminService } from './admin/admin.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent }   from './app.component';
 import {AlertModule}      from 'ngx-bootstrap';
 import { FormsModule }    from '@angular/forms';
-import { AdminComponent } from './admin/admin.component';
+
 import { HomeComponent } from './home/home.component';
+import { ClienteComponent } from './cliente/cliente.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent,
-    HomeComponent
+
+    HomeComponent,
+
+    ClienteComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +24,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule
 
   ],
-  providers: [],
+  providers: [AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
