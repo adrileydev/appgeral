@@ -1,4 +1,4 @@
-import { AdminService } from './admin/admin.service';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,14 +8,14 @@ import { FormsModule }    from '@angular/forms';
 
 import { HomeComponent } from './home/home.component';
 import { ClienteComponent } from './cliente/cliente.component';
+import { DatabaseService } from './Database/Database.service';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-
     HomeComponent,
-
     ClienteComponent
   ],
   imports: [
@@ -24,7 +24,7 @@ import { ClienteComponent } from './cliente/cliente.component';
     FormsModule
 
   ],
-  providers: [AdminService],
+  providers: [DatabaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

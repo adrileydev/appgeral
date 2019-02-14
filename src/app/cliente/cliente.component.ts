@@ -1,5 +1,6 @@
-import { AdminService } from './../admin/admin.service';
+
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from '../Database/Database.service';
 
 @Component({
   selector: 'app-cliente',
@@ -8,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteComponent implements OnInit {
 
+   valor :number = 0;
+  valor2 :number = 0;
+
   clientes: String[] = [];
-  constructor(Clientes: AdminService) {
+  constructor(Clientes: DatabaseService) {
     this.clientes = Clientes.getClientes();
+   }
+   adicao(){
+     this.valor++;
+   }
+   subtracao(){
+     this.valor--;
+       if(this.valor < 0 ){
+         this.valor = 0;
+       }
+
    }
 
   ngOnInit() {

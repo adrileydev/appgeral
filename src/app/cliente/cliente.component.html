@@ -1,6 +1,26 @@
-<h2>Clientes </h2>
+
+<h2> Clientes </h2>
 <ul>
   <li *ngFor="let item of clientes" >
       {{item}}
   </li>
 </ul>
+
+<div>
+   <button class="btn btn-primary" type="button" (click)="adicao()" >+</button>
+   <input type="text" [value]="valor" readonly>
+   <button class="btn btn-primary" type="button"(click)="subtracao()">-</button>
+</div>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC6sTYsioDQUQpJIcGVJryOsuiJePmUUkA",
+    authDomain: "devgeral-359a0.firebaseapp.com",
+    databaseURL: "https://devgeral-359a0.firebaseio.com",
+    projectId: "devgeral-359a0",
+    storageBucket: "devgeral-359a0.appspot.com",
+    messagingSenderId: "515689976964"
+  };
+  firebase.initializeApp(config);
+</script>

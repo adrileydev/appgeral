@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminService } from '../admin/admin.service';
+import { DatabaseService } from '../Database/Database.service';
 
 
 @Component({
@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   cursos: string[] = [];
 
 
-  constructor( private CursosServices_: AdminService) {
+  constructor( private CursosServices_: DatabaseService) {
  ///  this.CursosServices  = new  AdminService();
          }
 
