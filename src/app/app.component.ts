@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AdministradorComponent} from 'administrador/AdministradorComponent';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
